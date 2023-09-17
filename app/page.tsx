@@ -1,5 +1,5 @@
 import getSources from "@/lib/getSources";
-import Sources from "./components/Sources";
+import HomePage from "./components/HomePage";
 
 export default async function Home() {
   const sourcesData: Promise<Source[]> = getSources();
@@ -8,7 +8,7 @@ export default async function Home() {
  
   return (
     <main className="px-36 pt-5">
-      <Sources sources={sources}/>
+     <HomePage sources={sources}/>
     </main>
   )
 }
