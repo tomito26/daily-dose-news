@@ -1,13 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
+import SearchInput from "./SearchInput";
 
 export default function Navbar() {
   return (
     <nav className="flex justify-around items-center bg-slate-950 shadow-sm py-8 text-white mb-5">
-      <div className="logo">
+      <div className="flex items-center">
         <Link href="/">
-          <h1 className="hover:text-white/80">Daily Dose News</h1>
+          <Image
+            src={'/images/logo.svg'}
+            alt="logo"
+            height={150}
+            width={150}
+            priority
+          />
         </Link>
+        <SearchInput/>
       </div>
       <ul className="flex list-none">
         <li className="mr-5 px-2 text-white">
