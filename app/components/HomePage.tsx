@@ -8,7 +8,7 @@ type Props = {
 }
 const HomePage = ({ sources }:Props) => {
   const[currentPage, setCurrentPage] = useState(1);
-  const[sourcesPerPage] = useState(10);
+  const[sourcesPerPage] = useState(12);
 
   const indexOfLastSource =  currentPage * sourcesPerPage;
   const indexOfFirstSource =  indexOfLastSource - sourcesPerPage;

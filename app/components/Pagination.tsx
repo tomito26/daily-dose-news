@@ -23,6 +23,7 @@ export default function Pagination({
   const handlePaginate = (pageNumber: number) => {
     setActivePage(pageNumber);
     paginate(pageNumber);
+    console.log(pageNumber);
   };
 
   return (
@@ -30,13 +31,13 @@ export default function Pagination({
       <ul className="flex rounded-sm">
         {pageNumbers.map((number) => (
           <li
-            className={`${activePage === number ? "bg-white/20" : 'bg-white/30' }  text-white border-1 border-l cursor-pointer  border-black/30 my-10 px-3 py-2`}
+            className={`${
+              activePage === number ? "bg-white/20" : "bg-white/30"
+            }  text-white border-1 border-l cursor-pointer  border-black/30 my-10 px-3 py-2`}
             key={number}
             onClick={() => handlePaginate(number)}
           >
-            <Link href="#">
-              {number}
-            </Link>
+            <Link href="#">{number}</Link>
           </li>
         ))}
       </ul>
